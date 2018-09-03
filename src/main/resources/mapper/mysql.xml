@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.jiekou.cases">
+    <!-- 这是测试接口的sql -->
+	<select id="url" parameterType="Integer" resultType="String">
+	    select url from logincase where id=#{id}
+	</select>
+	<select id="username" parameterType="Integer" resultType="String">
+	    select username from logincase where id=#{id}
+	</select>
+	<select id="password" parameterType="Integer" resultType="String">
+	    select password from logincase where id=#{id}
+	</select>
+	<select id="expected" parameterType="Integer" resultType="String">
+	    select expected from logincase where id=#{id}
+	</select>
+	<select id="UserList" parameterType="Integer" resultType="com.jiekou.model.LoginUser1" >
+	    select * from logincase where id=#{id}
+	</select>
+	<select id="selectUsercount"  resultType="Integer">
+	    select count(*) from user
+	</select>
+</mapper>
